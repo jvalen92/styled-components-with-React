@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Logo, Menu, MenuItem } from './style';
+import { Container, ItemStyled, Logo, Menu, MenuItem } from './style';
 
 const Navbar: React.FC = () => {
   return (
@@ -9,6 +9,13 @@ const Navbar: React.FC = () => {
         <Menu>
           <MenuItem>About</MenuItem>
           <MenuItem>Contact</MenuItem>
+          <ItemStyled 
+            color={'white'}
+            background={'palevioletred'}
+            border={true}
+          >
+            Styled item
+          </ItemStyled>
         </Menu>
       </Container>
     </>

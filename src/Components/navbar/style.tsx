@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -20,4 +20,20 @@ export const Menu = styled.div`
 export const MenuItem = styled.div`
   margin-right: 30px;
   font-size: 1em;
+`;
+
+interface Ibtn {
+  color: string,
+  background: string,
+  border: boolean
+}
+
+export const ItemStyled = styled.button<Ibtn>`
+  margin-right: 30px;
+  padding: 10px;
+  color: ${props => props.color};
+  background: ${props => props.background};
+  ${props => props.border && css`
+    border-radius: 25%;
+  `}
 `;
